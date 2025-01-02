@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,30 +6,42 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
+/* Header */
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Increased size for a stronger impact */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: bold; /* Make links stand out */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 header nav a:hover {
     text-decoration: underline;
+    color: #ffa500; /* Accent color on hover */
 }
 
+/* Sections */
 section {
     padding: 2rem;
     margin: 1rem auto;
@@ -40,35 +53,107 @@ section {
 
 section h2 {
     margin-top: 0;
+    font-size: 2rem;
+    color: #444;
+    border-bottom: 2px solid #ddd; /* Add a subtle underline */
+    padding-bottom: 0.5rem;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
     background: #333;
     color: #fff;
     margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
+/* Form */
 form label {
     display: block;
     margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-form input, form textarea, form button {
+form input, form textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem; /* Increased padding for better usability */
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.5);
+    outline: none;
 }
 
 form button {
     background: #333;
     color: #fff;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
     background: #555;
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Links Section */
+#links ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#links ul li a:hover {
+    color: #ff4500; /* Hover color for links */
+    text-decoration: underline;
+}
+
+/* Publications Section */
+#publications ul > li > strong {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: bold;
+}
+
+#publications ul ul li {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic; /* Distinguish journal names */
+}
+
+/* Adjust Section Margins */
+section + section {
+    margin-top: 3rem; /* Add space between sections */
+}
+
+/* Image Styling for Banner (if added later) */
+#banner img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#banner p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
 }
